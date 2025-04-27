@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <style>
+    @font-face {
+      font-family: 'Markazi Text';
+      src: url('https://fonts.gstatic.com/s/markazitext/v12/f0Xz0eSSsWlOn1l6G4WzSyF1VsaVKg.woff2') format('woff2');
+    }
+    text {
+      font-family: 'Markazi Text', serif;
+    }
+  </style>
+  <circle cx="50" cy="50" r="48" fill="#AAF" />
+  <text x="50%" y="55%" font-size="85" text-anchor="middle" fill="#DFA" dy=".3em">
+    AM
+  </text>
+</svg>
