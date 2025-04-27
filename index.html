@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio for AvaMarie Mendoza</title>
-    <base href="/amendoza.portfolio/">
+    <!-- <base href="/amendoza.portfolio/"> -->
+
+    <script>
+  const base = document.createElement('base');
+  base.href = (location.hostname === "localhost" || location.hostname === "127.0.0.1") 
+    ? "/" 
+    : "/amendoza.portfolio/";
+  document.head.appendChild(base);
+</script>
+
+    
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-
 
   </head>
   
@@ -42,6 +51,33 @@
       <h2>My Certifications</h2>
       <p>Here’s a little bit about me. I’m learning web development!</p>
     </section>
+
+    <style>
+     <!-- button {
+        background-color: rgba(170, 170, 255, 0.9); /* lilac-blue color with 70% opacity */
+        color: #222; /* dark text */
+        border: none; /* remove default border */
+        border-radius: 15px; /* make it rounded */
+        padding: 0.5em 1.2em; /* space inside button */
+        font-family: 'Markazi Text', serif; /* nice font */
+        font-size: 1.2em;
+        cursor: pointer; /* cursor becomes pointer on hover */
+        transition: background-color 0.3s ease; /* smooth hover effect */
+     } -->
+      
+      button:hover {
+        background-color: rgba(170, 170, 255, 0.9); /* darker opacity on hover */
+      }
+      </style>
+      <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" rel="noopener noreferrer">
+        <button class="glass-button-soft">LinkedIn</button>
+      </a>
+      
+      
+   <!-- <button id="magicButton">Click me for magic ✨</button> -->
+<div id="magicArea"></div>
+
+
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="image-grid">
@@ -85,6 +121,7 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
+  </section>
 
   </div>
   <section id="conferences">
@@ -100,6 +137,15 @@
     <p>&copy; 2025 AvaMarieM</p>
   </footer>
   <script>
+    const magicButton = document.getElementById('magicButton');
+const magicArea = document.getElementById('magicArea');
+
+magicButton.addEventListener('click', () => {
+  const newParagraph = document.createElement('p'); // Create a <p> element
+  newParagraph.textContent = "🎉 You made DOM magic happen!";
+  magicArea.appendChild(newParagraph); // Add the paragraph to the page
+});
+
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
   

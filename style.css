@@ -189,3 +189,22 @@ nav a.active {
   height: 100%;
   border: 0;
 }
+
+.glass-button-soft {
+  background: rgba(255, 255, 255, 0.05); /* even lighter glass */
+  border: 1px solid #d8bfd8;
+  border-radius: 25px;
+  padding: 10px 25px;
+  color: #d8bfd8;
+  font-size: 1.2em;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 0 5px rgba(216, 191, 216, 0.5); /* lighter lilac glow */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass-button-soft:hover {
+  background: rgba(216, 191, 216, 0.1); /* very gentle lilac highlight */
+  box-shadow: 0 0 10px rgba(216, 191, 216, 0.6);
+}
