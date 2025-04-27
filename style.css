@@ -7,7 +7,10 @@
 
 /* Set the background color for the whole page */
 body {
-  font-family: Arial, sans-serif;
+  body {
+  font-family: 'Markazi Text', serif;
+}
+
   background-color: #f5f0e1; /* light tan color */
   color: #333;
 }
@@ -17,15 +20,16 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000; /* Makes sure it stays above other content */
-  /* (keep your other styles like background-color, padding, etc.) */
-
-
   background-color: #d8bfd8; /* faded lilac color */
   color: #4a4a4a; /* softer text color to match lilac */
   padding: 2em;
   text-align: center;
   border-bottom: 3px solid #c0a0c0; /* a darker lilac border for style */
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 30px;
 }
+
+
 
 /* Style the main content area */
 main {
@@ -75,6 +79,13 @@ nav a {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
+  nav a {
+    background-color: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
 }
 
 nav a:hover {
