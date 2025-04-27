@@ -9,7 +9,7 @@
     }
   </style>
   <circle cx="50" cy="50" r="48" fill="#AAF" />
-  <text x="50%" y="55%" font-size="85" text-anchor="middle" fill="#DFA" dy=".3em">
+  <text x="50%" y="55%" font-size="45" text-anchor="middle" fill="#DFA" dy=".3em">
     AM
   </text>
 </svg>
