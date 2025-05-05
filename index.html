@@ -1,185 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio for AvaMarie Mendoza</title>
+    <title data-i18n="title">Portfolio - AvaMarie Mendoza</title>
     <!-- <base href="/amendoza.portfolio/"> -->
 
     <script>
-  const base = document.createElement('base');
-  base.href = (location.hostname === "localhost" || location.hostname === "127.0.0.1") 
-    ? "/" 
-    : "/amendoza.portfolio/";
-  document.head.appendChild(base);
-</script>
+      const base = document.createElement('base');
+      base.href = (location.hostname === "localhost" || location.hostname === "127.0.0.1") 
+        ? "/" 
+        : "/amendoza.portfolio/";
+      document.head.appendChild(base);
+    </script>
 
-    
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+      .language-toggle button {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        padding: 0.5em 1em;
+        margin: 0 0.5em;
+        color: #fff;
+        font-weight: bold;
+        backdrop-filter: blur(8px);
+        transition: background 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
 
+      .language-toggle button:hover {
+        background: rgba(255, 255, 255, 0.35);
+      }
+    </style>
   </head>
-  
-<body>
-  <header>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple webpage built with HTML and CSS.</p>
-  
+
+  <body>
+    <header>
+      <h1 data-i18n="welcome">Porfolio of AvaMarie Mendoza</h1>
+      <p data-i18n="intro">Based in Michigan, primarily versed in remote work.</p>
+      <div class="language-toggle">
+        <button onclick="setLanguage('en')">🇺🇸 English</button>
+        <button onclick="setLanguage('es')">🇪🇸 Español</button>
+      </div>  
+      <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" rel="noopener noreferrer">
+        <button class="glass-button-luxury" data-i18n="linkedin">LinkedIn 💼</button>
+      </a>
+
+    </header>
     <nav>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#certifications" class="nav-link">Certifications</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <a href="#conferences" class="nav-link">Conferences</a>
+      <a href="#about" class="glass-button-luxury">About</a>
+      <a href="#projects" class="glass-button-luxury">Projects</a>
+      <a href="#certifications" class="glass-button-luxury">Certifications</a>
+      <a href="#contact" class="glass-button-luxury">Contact</a>
+      <a href="#conferences" class="glass-button-luxury">Conferences</a>
     </nav>
     
+    <main>
+      <section id="about">
+        <div class ="section-wrapper light-bg"> 
+         <h2>About Me</h2>
+         <div class="about-wrapper">
+          <!-- Profile image will appear on the right thanks to CSS "row-reverse" -->
+          <img src="images/DSC_0495.JPG" alt="" class="profile-photo" />
+        
     
-  </header>
+          <div class="about-text">
+            <p data-i18n="about.text">Hello! Welcome to my portfolio. I am both fascinated and intrigued about learning anything related to geography. My specialized fields of interest are indoor mapping, vertical location services, programming using Python, and address standardization using MSAG and road centerline data. I have experience with ArcGIS Pro, ArcMap, AutoCAD, scan2CAD, Adobe Acrobat, Microsoft Excel, Airflow, and ArcGIS Online Applications. I’m an experienced geospatial professional and passionate problem solver. I thrive in the intersection of maps, data, and community.</p>
+            <ul class="custom-list">
+              <li data-i18n="about.exp1">Experience Builder</li>
+              <li data-i18n="about.exp2">Dashboards</li>
+              <li data-i18n="about.exp3">Field Maps Designer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  
 
-  <main>
+      <section id="projects">
+        <h2 data-i18n="projects.title">Projects</h2>
+        <p data-i18n="projects.text">Things I've built!</p>
+      </section>
 
-  <div> <section id="about">
-      <h2>AvaMarie Mendoza</h2>
-      <p>Hello! Welcome to my portfolio. I am a both facinated, and intrigued about learning anything related to geography. My specialized fields of interest are indoor mapping, vertical location services, programming using Python, and address standarization using MSAG and road centerline data. I have experience with ArcGIS Pro, ArcMap, AutoCAD, scan2CAD, Adobe Acrobat, Microsoft Exel, Airflow, and ArcGIS Online Applications 
-        <ul class="custom-list">
-        <li>Experience Builder</li>
-        <li>Dashboards</li>
-        <li>Field Maps Designer</li>
-      </ul>
-      
-    </section>
-</div>
+    
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Things I've built!</p>
-    </section>
-    <section id="certifications">
-      <h2>My Certifications</h2>
-      <p>Here’s a little bit about me. I’m learning web development!</p>
-    </section>
+      <section id="certifications">
+        <h2 data-i18n="certification.title">My Certificates</h2>
+        <div class="image-grid">
+          <img src="AmCert.png" alt="Description of photo 1">
+        
+       
 
-    <style>
-      
-      button {
-        background-color: rgba(170, 170, 255, 0.9); /* lilac-blue color with 70% opacity */
-        color: #9674dc; /* dark text */
-        border: none; /* remove default border */
-        border-radius: 15px; /* make it rounded */
-        padding: 0.5em 1.2em; /* space inside button */
-        font-family: 'Markazi Text', serif; /* nice font */
-        font-size: 1.2em;
-        cursor: pointer; /* cursor becomes pointer on hover */
-        transition: background-color 0.3s ease; /* smooth hover effect */
-     } 
-      
-      button:hover {
-        background-color: rgba(170, 170, 255, 0.9); /* darker opacity on hover */
-      }
-      </style>
-      <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-        <button class="glass-button-luxury">LinkedIn 💼</button>
-      </a>
-      
-     <!-- OLD BUTTON VERSION ------  <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" rel="noopener noreferrer">
+      <!-- OLD BUTTON VERSION ------  <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" rel="noopener noreferrer">
         <button class="glass-button-soft">LinkedIn</button>
       </a> -->
-      
-      
-   <!-- <button id="magicButton">Click me for magic ✨</button> -->
-<div id="magicArea"></div>
 
+      <!-- <button id="magicButton">Click me for magic ✨</button> -->
+      <div id="magicArea"></div>
 
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="image-grid">
-        <img src="images/DSC_0495.JPG" alt="Description of photo 1">
-        <img src="images/photo2.jpg" alt="Description of photo 2">
-        <img src="images/photo3.jpg" alt="Description of photo 3">
-      </div>
-    </section>
-    
+      <section id="gallery">
+        <h2 data-i18n="gallery.title">Certificates</h2>
+        <div class="image-grid">
+          
+          <img src="UC-2c03bb7f-b4ec-4b2b-9ada-e0dd9023b356.jpg" alt="Description of photo 2">
+          <img src="AutoCAD.jpg" alt="Description of photo 3">
+       
+        </div>
+      </section>
 
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-
-        <form action="https://formspree.io/f/mqaqaqlr" method="POST" class="nature-form">
-          <label>
-            Your Name
-            <input type="text" name="name" required>
-          </label>
+      <section id="conferences">
+        <h2 data-i18n="conferences.title">Conferences I've attended</h2>
+        <div class ="section-wrapper light-bg">
+          <img src ="911image.webp"> <p data-i18n="conferences.text">In 2024, I attending the Annual Michigan 911 Technology Conference in Lansing Michiga as a representative for GeoComm. /n Here we made new connections with Michigan stakeholders and policy leaders, attended presentations for up-in-coming technologies and fundamentals of emergency response, and presented how GeoComm uses Z-axis and indoor mapping tehcnology to locate calls within a building faster. (Or even a corn silo!)    </p>
+        
+      </section>
       
-          <label>
-            Your Email
-            <input type="email" name="_replyto" required>
-          </label>
-      
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-      
-          <button type="submit">Send Message</button>
-        </form>
-       <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918754.583882233!2d-87.98913969999999!3d44.3148443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822c0c9b9f4d0d7%3A0x4e7033916cfc6a93!2sMichigan!5e0!3m2!1sen!2sus!4v1680614040619!5m2!1sen!2sus" 
-        width="400" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
     </div>
-  </section>
+      <section id="contact">
+        <h2 data-i18n="contact.title">Contact Me</h2>
+        <div class="contact-container">
+          <form action="https://formspree.io/f/mqaqaqlr" method="POST" class="nature-form">
+            <label>
+              <span data-i18n="form.name">Your Name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span data-i18n="form.email">Your Email</span>
+              <input type="email" name="_replyto" required>
+            </label>
+            <label>
+              <span data-i18n="form.message">Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit" data-i18n="form.send">Send Message</button>
+          </form>
+          <div class="map-container">
+          
+          </div><iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12196994.684573377!2d-96.20298129801933!3d44.314844299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822c8ed57a281b1%3A0x5c4a0e109fce13f9!2sMichigan!5e0!3m2!1sen!2sus!4v1588109631552!5m2!1sen!2sus"
+          width="400" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+        
+        </div>
+      </section>
 
-  </div>
-  <section id="conferences">
-    <h2>Conferences I've attended</h2>
-    <p>Here’s a little bit about me. I’m learning web development!</p>
-  </section>
-</section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 AvaMarieM</p>
+    </footer>
 
 
-  </main>
+    <script src="translations.js"></script>
 
-  <footer>
-    <p>&copy; 2025 AvaMarieM</p>
-  </footer>
-  <script>
-    const magicButton = document.getElementById('magicButton');
-const magicArea = document.getElementById('magicArea');
+    <script>
+      const magicButton = document.getElementById('magicButton');
+      const magicArea = document.getElementById('magicArea');
 
-magicButton.addEventListener('click', () => {
-  const newParagraph = document.createElement('p'); // Create a <p> element
-  newParagraph.textContent = "🎉 You made DOM magic happen!";
-  magicArea.appendChild(newParagraph); // Add the paragraph to the page
-});
+      if (magicButton) {
+        magicButton.addEventListener('click', () => {
+          const newParagraph = document.createElement('p');
+          newParagraph.textContent = "🎉 You made DOM magic happen!";
+          magicArea.appendChild(newParagraph);
+        });
+      }
 
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-  
-    window.addEventListener("scroll", () => {
-      let current = "";
-  
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 60;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute("id");
-        }
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 60;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
       });
-  
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
-  
-</body>
+        
+
+      function setLanguage(lang) {
+        localStorage.setItem('lang', lang);
+        updateTextContent();
+      }
+
+      function updateTextContent() {
+        const lang = localStorage.getItem('lang') || 'en';
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const keys = el.getAttribute('data-i18n').split('.');
+          let value = translations[lang];
+          keys.forEach(k => value = value?.[k]);
+          if (value) el.textContent = value;
+        });
+        document.documentElement.lang = lang;
+      }
+
+      document.addEventListener('DOMContentLoaded', updateTextContent);
+    </script>
+  </body>
 </html>
