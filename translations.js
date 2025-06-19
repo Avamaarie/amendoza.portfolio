@@ -2,7 +2,7 @@ const translations = {
     en: {
       title: "Portfolio - AvaMarie Mendoza",
       welcome: "AvaMarie Mendoza",
-      intro: "Based in Michigan, primarily versed in remote work.",
+      intro: "Based in Michigan 📍",
       nav: {
         about: "About",
         projects: "Projects",
@@ -44,9 +44,9 @@ const translations = {
       linkedin: "LinkedIn 💼"
     },
     es: {
-        title: "Portafolio de AvaMarie Mendoza",
-        welcome: "Bienvenidos a mi sitio web",
-        intro: "Esta es una página web sencilla construida con HTML y CSS.",
+        title: "Portafolio - AvaMarie Mendoza",
+        welcome: "AvaMarie Mendoza",
+        intro: "Soy de Michigan 📍",
         nav: {
           about: "Acerca de",
           projects: "Proyectos",

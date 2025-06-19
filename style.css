@@ -80,6 +80,21 @@ header {
   text-align: center;
 }
 
+.linkedin-wrapper {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.linkedin-wrapper .glass-button-luxury {
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+}
+
+
 /* Style the main content area */
 main {
   padding: 2em;
@@ -116,7 +131,43 @@ html {
   scroll-behavior: smooth;
 }
 
-/* NAVIGATION */
+/* NAVIGATION with rectangles
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em 0;
+}
+
+nav a.glass-button-luxury {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0; /* Removes rounded corners */
+  /* background-color: #f0d9f8; /* Light lavender background */
+ /* color: #333;
+  border: 2px solid transparent;
+  border-bottom: 4px solid #c49ac4; /* ** Lavender underline */
+ /* text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center; /*
+}
+/*
+nav a.glass-button-luxury:hover {
+  background-color: #e6c2ee;
+  color: white;
+  border-color: #c49ac4;
+} /*
+.nav-container {
+  background: #e9d8f1;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+} /*
+
+/* THIS NAV IS MY OLD ONE BEFORE CHANGING TO RECTANGLE. THESE ARE SEPERATE OVAL LOOK----
 nav {
   position: fixed;
   top: 1em;
@@ -125,15 +176,15 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 0.75em;
+  background: transparent;
 }
-
 nav a {
   text-align: center;
-  width: max-content; /* Optional: keep the button size tidy */
-}
+  width: max-content; /* Optional: keep the button size tidy */ 
 
 
-/*nav a {
+/*THE TEXT UNDER THIS ABOUT NAV, I'M NOT SURE WHAT THE STYLE WAS BUT NOT DELETEING -----
+nav a {
   text-decoration: none;
   color: #4a4a4a;
   background-color: #f5f0e1;
@@ -312,7 +363,57 @@ nav a.active {
   }
 }
 
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  background-color: rgba(230, 220, 250, 0.3); /* soft lavender tint */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
 
+/* NAV CONTAINER - Always visible at the top */
+.nav-container {
+  position: fixed;
+  top: 5.6em; /* Adjust so it sits under language buttons */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: #e9d8f1;
+  padding: 0.5em 1em; /* Smaller padding */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
 
+/* NAV CONTENT */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Keep all buttons on one line */
+  gap: 0.5em; /* Tighter gap between buttons */
+}
+
+/* BUTTON STYLE */
+nav a.glass-button-luxury {
+  display: inline-block;
+  padding: 0.5em 1.2em; /* Smaller buttons */
+  border-radius: 0;
+  background-color: #f0d9f8;
+  color: #333;
+  border: 2px solid transparent;
+  border-bottom: 4px solid #c49ac4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap; /* Prevent button wrapping */
+}
+
+nav a.glass-button-luxury:hover {
+  background-color: #e6c2ee;
+  color: white;
+  border-color: #c49ac4;
+}
 
 

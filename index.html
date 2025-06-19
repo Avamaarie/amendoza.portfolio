@@ -15,6 +15,9 @@
       document.head.appendChild(base);
     </script>
 
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -41,32 +44,56 @@
 
   <body>
     <header>
+      <div class="linkedin-wrapper">
+        <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" class="glass-button-luxury">
+          💼 LinkedIn
+        </a>
+        <a href="Resume 2023 .pdf" download class="glass-button-luxury">
+          📄 Resume
+        </a>
+      </div>
+      
       <h1 data-i18n="welcome">Porfolio of AvaMarie Mendoza</h1>
-      <p data-i18n="intro">Based in Michigan, primarily versed in remote work.</p>
+      <p data-i18n="intro">Based in Michigan <img src="purpleicon.jpg" </p>
       <div class="language-toggle">
         <button onclick="setLanguage('en')">🇺🇸 English</button>
         <button onclick="setLanguage('es')">🇪🇸 Español</button>
       </div>  
-      <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" rel="noopener noreferrer">
-        <button class="glass-button-luxury" data-i18n="linkedin">LinkedIn 💼</button>
-      </a>
-
-    </header>
+      <!-- NEW: Navigation bar under the language buttons -->
+  <div class="nav-container sticky-nav">
     <nav>
-      <a href="#about" class="glass-button-luxury">About</a>
-      <a href="#projects" class="glass-button-luxury">Projects</a>
-      <a href="#certifications" class="glass-button-luxury">Certifications</a>
-      <a href="#contact" class="glass-button-luxury">Contact</a>
-      <a href="#conferences" class="glass-button-luxury">Conferences</a>
+      <a href="#about" class="glass-button-luxury" data-i18n="nav.about">About</a>
+      <a href="#projects" class="glass-button-luxury" data-i18n="nav.projects">Projects</a>
+      <a href="#certifications" class="glass-button-luxury" data-i18n="nav.certifications">Certifications</a>
+      <a href="#gallery" class="glass-button-luxury" data-i18n="nav.gallery">Gallery</a>
+      <a href="#conferences" class="glass-button-luxury" data-i18n="nav.conferences">Conferences</a>
+      <a href="#contact" class="glass-button-luxury" data-i18n="nav.contact">Contact</a>
     </nav>
+  </div>
+</header>
+
+<!-- Old navigation
+    </header>
+    <div class="nav-container">
+      <nav>
+        <a href="#about" class="glass-button-luxury" data-i18n="nav.about">About</a>
+        <a href="#projects" class="glass-button-luxury" data-i18n="nav.projects">Projects</a>
+        <a href="#certifications" class="glass-button-luxury" data-i18n="nav.certifications">Certifications</a>
+        <a href="#gallery" class="glass-button-luxury" data-i18n="nav.gallery">Gallery</a>
+        <a href="#conferences" class="glass-button-luxury" data-i18n="nav.conferences">Conferences</a>
+        <a href="#contact" class="glass-button-luxury" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div> -->
     
+
+
     <main>
       <section id="about">
         <div class ="section-wrapper light-bg"> 
-         <h2>About Me</h2>
+         <h2 data-i18n="about.title" > About Me </h2>
          <div class="about-wrapper">
           <!-- Profile image will appear on the right thanks to CSS "row-reverse" -->
-          <img src="images/DSC_0495.JPG" alt="" class="profile-photo" />
+          <img src="92539825.jpg" alt="" class="profile-photo" />
         
     
           <div class="about-text">
