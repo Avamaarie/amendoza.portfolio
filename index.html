@@ -43,34 +43,55 @@
   </head>
 
   <body>
-    <header>
-      <div class="linkedin-wrapper">
-        <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" class="glass-button-luxury">
-          💼 LinkedIn
-        </a>
-        <a href="Resume 2023 .pdf" download class="glass-button-luxury">
-          📄 Resume
-        </a>
-      </div>
-      
-      <h1 data-i18n="welcome">Porfolio of AvaMarie Mendoza</h1>
-      <p data-i18n="intro">Based in Michigan <img src="purpleicon.jpg" </p>
-      <div class="language-toggle">
-        <button onclick="setLanguage('en')">🇺🇸 English</button>
-        <button onclick="setLanguage('es')">🇪🇸 Español</button>
-      </div>  
-      <!-- NEW: Navigation bar under the language buttons -->
-  <div class="nav-container sticky-nav">
-    <nav>
-      <a href="#about" class="glass-button-luxury" data-i18n="nav.about">About</a>
-      <a href="#projects" class="glass-button-luxury" data-i18n="nav.projects">Projects</a>
-      <a href="#certifications" class="glass-button-luxury" data-i18n="nav.certifications">Certifications</a>
-      <a href="#gallery" class="glass-button-luxury" data-i18n="nav.gallery">Gallery</a>
-      <a href="#conferences" class="glass-button-luxury" data-i18n="nav.conferences">Conferences</a>
-      <a href="#contact" class="glass-button-luxury" data-i18n="nav.contact">Contact</a>
-    </nav>
+
+   <header>
+
+    
+  <!-- Moved language buttons up here -->
+  <div class="language-toggle">
+    <button onclick="setLanguage('en')">🇺🇸 English</button>
+    <button onclick="setLanguage('es')">🇪🇸 Español</button>
   </div>
+
+ <!-- Name and intro -->
+  <h1 data-i18n="welcome">Portfolio of AvaMarie Mendoza</h1>
+  <p data-i18n="intro">
+  Based in Michigan 🌍
+</p>
+
+  <!-- Moved LinkedIn/Resume buttons below -->
+  <div class="linkedin-wrapper">
+    <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" class="glass-button-luxury">
+      💼 LinkedIn
+    </a>
+    <a href="AvaMarie_Resume2025.pdf" download class="glass-button-luxury">
+      📄 Resume
+    </a>
+  </div>
+
+ 
 </header>
+  
+    <!-- NEW: Navigation bar under the language buttons -->
+  <!-- Top-center nav (visible at top of page only) -->
+<div class="top-nav-container">
+  <a href="#about" data-i18n="nav.about">About</a>
+  <a href="#projects" data-i18n="nav.projects">Projects</a>
+  <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
+  <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+  <a href="#conferences" data-i18n="nav.conferences">Conferences</a>
+  <a href="#contact" data-i18n="nav.contact">Contact</a>
+</div>
+
+<!-- Side-tab nav (only appears on scroll) -->
+<div class="side-tab-nav">
+  <a href="#about" data-i18n="nav.about">About</a>
+  <a href="#projects" data-i18n="nav.projects">Projects</a>
+  <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
+  <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+  <a href="#conferences" data-i18n="nav.conferences">Conferences</a>
+  <a href="#contact" data-i18n="nav.contact">Contact</a>
+</div>
 
 <!-- Old navigation
     </header>
@@ -117,9 +138,9 @@
     
 
       <section id="certifications">
-        <h2 data-i18n="certification.title">My Certificates</h2>
+        <h2 data-i18n="certifications.title">My Certificates</h2>
         <div class="image-grid">
-          <img src="AmCert.png" alt="Description of photo 1">
+          <img src="AmCert.png" alt="GIS Certification from Michigan State University">
         
        
 
@@ -240,5 +261,13 @@
 
       document.addEventListener('DOMContentLoaded', updateTextContent);
     </script>
+
+ <script>
+  window.addEventListener('scroll', () => {
+    document.body.classList.toggle('scrolled', window.scrollY > 100);
+  });
+</script>
+
+
   </body>
 </html>
