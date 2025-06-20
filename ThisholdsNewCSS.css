@@ -1,0 +1,419 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+  body{
+    font-family: 'Markazi Text', serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fdf6e3, #f5f0dc); /* Modern tan gradient */
+  overflow-x: hidden;
+}
+
+/* ABOUT WRAPPER: positions profile photo to the right of text */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-direction: row-reverse; /* <-- this moves the photo to the right side */
+}
+
+.profile-photo {
+  width: 670px; /* Larger  */
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+.section-wrapper {
+  padding: 60px 30px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.light-bg {
+  background: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.about-text {
+  max-width: 600px;
+  flex: 1;
+}
+
+/* Content container */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Markazi Text', serif; /* Optional override */
+}
+
+/* Style the header */
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+header {
+  background-color: #d9c2dd;
+  padding: 4em 2em;
+  clip-path: ellipse(80% 60% at 50% 40%);
+  text-align: center;
+}
+
+.linkedin-wrapper {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.linkedin-wrapper .glass-button-luxury {
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+}
+
+
+/* Style the main content area */
+main {
+  padding: 2em;
+}
+
+/* Style the footer */
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f0e1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d8bfd8;
+  border-radius: 6px;
+  border: 2px solid #f5f0e1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c49ac4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAVIGATION with rectangles
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em 0;
+}
+
+nav a.glass-button-luxury {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0; /* Removes rounded corners */
+  /* background-color: #f0d9f8; /* Light lavender background */
+ /* color: #333;
+  border: 2px solid transparent;
+  border-bottom: 4px solid #c49ac4; /* ** Lavender underline */
+ /* text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center; /*
+}
+/*
+nav a.glass-button-luxury:hover {
+  background-color: #e6c2ee;
+  color: white;
+  border-color: #c49ac4;
+} /*
+.nav-container {
+  background: #e9d8f1;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+} /*
+
+/* THIS NAV IS MY OLD ONE BEFORE CHANGING TO RECTANGLE. THESE ARE SEPERATE OVAL LOOK----
+nav {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75em;
+  background: transparent;
+}
+nav a {
+  text-align: center;
+  width: max-content; /* Optional: keep the button size tidy */ 
+
+
+/*THE TEXT UNDER THIS ABOUT NAV, I'M NOT SURE WHAT THE STYLE WAS BUT NOT DELETEING -----
+nav a {
+  text-decoration: none;
+  color: #4a4a4a;
+  background-color: #f5f0e1;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #c49ac4;
+  color: white;
+}
+
+nav a.active {
+  background-color: #c49ac4;
+  color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}/*
+
+/* IMAGE GRID */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+
+
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Nature form styling */
+.nature-form {
+  background: linear-gradient(to bottom right, #f0efe6, #e8f5e9);
+  padding: 2em;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 2em auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  color: #2e4a2d;
+  border: 2px solid #cdddc8;
+}
+
+.nature-form label {
+  display: block;
+  margin-bottom: 1.2em;
+  font-weight: bold;
+}
+
+.nature-form input,
+.nature-form textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-top: 0.5em;
+  border: 1px solid #a3bfa6;
+  border-radius: 6px;
+  background-color: #fdfdfb;
+  font-family: inherit;
+}
+
+.nature-form button {
+  background-color: #6ca67c;
+  color: white;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nature-form button:hover {
+  background-color: #5a8c69;
+}
+
+/* CONTACT AND MAP */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2em;
+}
+
+.map-container {
+  flex: 1 1 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* GLASS BUTTON - LUXURY */
+.glass-button-luxury {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #d8bfd8;
+  border-radius: 30px;
+  padding: 12px 28px;
+  color: #5a5a5a;
+  font-size: 1.3em;
+  font-family: 'Markazi Text', serif;
+  backdrop-filter: blur(8px) brightness(1.1);
+  -webkit-backdrop-filter: blur(8px) brightness(1.1);
+  box-shadow: 0 0 8px rgba(216, 191, 216, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass-button-luxury:hover {
+  background: rgba(216, 191, 216, 0.15);
+  box-shadow: 0 0 15px rgba(216, 191, 216, 0.8);
+}
+
+/* CUSTOM BULLETED LIST */
+.custom-list {
+  list-style-type: disc;
+  color: #6a5acd;
+  font-family: 'Markazi Text', serif;
+  font-size: 1.3em;
+  padding-left: 1.5em;
+}
+
+.custom-list li {
+  margin-bottom: 0.5em;
+}
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  background-color: rgba(230, 220, 250, 0.3); /* soft lavender tint */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* NAV CONTAINER - Always visible at the top */
+.nav-container {
+  position: fixed;
+  top: 5.6em; /* Adjust so it sits under language buttons */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: #e9d8f1;
+  padding: 0.5em 1em; /* Smaller padding */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+/* NAV CONTENT */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Keep all buttons on one line */
+  gap: 0.5em; /* Tighter gap between buttons */
+}
+
+/* BUTTON STYLE */
+nav a.glass-button-luxury {
+  display: inline-block;
+  padding: 0.5em 1.2em; /* Smaller buttons */
+  border-radius: 0;
+  background-color: #f0d9f8;
+  color: #333;
+  border: 2px solid transparent;
+  border-bottom: 4px solid #c49ac4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap; /* Prevent button wrapping */
+}
+
+nav a.glass-button-luxury:hover {
+  background-color: #e6c2ee;
+  color: white;
+  border-color: #c49ac4;
+}
+
+
