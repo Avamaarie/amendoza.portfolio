@@ -2,7 +2,11 @@ const translations = {
     en: {
       title: "Portfolio - AvaMarie Mendoza",
       welcome: "AvaMarie Mendoza",
+<<<<<<< HEAD
       intro: "Based in Michigan 🌍",
+=======
+      intro: "Based in Michigan 📍",
+>>>>>>> 008156c4669ab00ae856f669a41d8f818224bc98
       nav: {
         about: "About",
         projects: "Projects",
@@ -48,7 +52,11 @@ const translations = {
     es: {
         title: "Portafolio - AvaMarie Mendoza",
         welcome: "AvaMarie Mendoza",
+<<<<<<< HEAD
         intro: "Soy de Michigan 🌍",
+=======
+        intro: "Soy de Michigan 📍",
+>>>>>>> 008156c4669ab00ae856f669a41d8f818224bc98
         nav: {
           about: "Acerca de",
           projects: "Proyectos",
