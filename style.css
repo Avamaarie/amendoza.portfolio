@@ -8,11 +8,9 @@
 
 
 
-  body{
-    font-family: 'Markazi Text', serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #fdf6e3, #f5f0dc); /* Modern tan gradient */
+ body {
+  font-family: 'Markazi Text', serif;
+  background: linear-gradient(135deg, #fdf6e3, #f5f0dc); /* tan background */
   overflow-x: hidden;
 }
 
@@ -67,31 +65,212 @@
   font-family: 'Markazi Text', serif; /* Optional override */
 }
 
-/* Style the header */
-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
+.language-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
 }
 
+
+/* === BASE RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Markazi Text', serif;
+  background: linear-gradient(135deg, #fdf6e3, #f5f0dc); /* tan background */
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === HEADER STYLE === */
 header {
-  background-color: #d9c2dd;
+  background-color: #d9c2dd; /* soft lavender */
   padding: 4em 2em;
   clip-path: ellipse(80% 60% at 50% 40%);
   text-align: center;
+  position: relative;
+  z-index: 1; /* ensure it doesn’t overlay nav */
 }
 
-/* Style the main content area */
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 2.5em; /* Add this line to push it down */
+}
+header p {
+  margin-top: 1em; /* Add this if it's not already styled */
+}
+
+.inline-icon {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: text-bottom;
+  margin-left: 0.3em;
+  border: 1px solid red; /*temporary*/
+}
+
+/* === LINKEDIN + RESUME === */
+.linkedin-wrapper {
+  margin: 1.5em auto; /* pushes it down below */
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.linkedin-wrapper .glass-button-luxury {
+  font-family: 'Markazi Text', serif;
+  font-size: 0.9rem;
+  padding: 0.4em 0.8em;
+  text-decoration: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  color: #333;
+}
+
+/* === TOP-CENTER NAV === */
+.top-nav-container {
+  position: fixed;
+  top: 0.80em;
+  left: 13%;
+  transform: translateX(-20%);
+  z-index: 9999;
+  display: flex;
+  gap: 0.75em;
+  padding:  0.5em 1.25em;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(14px);
+  border-radius: 40px;
+  box-shadow: 0 12px 24px rgba(210, 160, 230, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+body.scrolled .top-nav-container {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-nav-container a {
+  font-family: 'Markazi Text', serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  padding: 0.4em 1.1em;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 2px solid #e2c1ef;
+  box-shadow: 0 4px 10px rgba(190, 150, 220, 0.25);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.top-nav-container a:hover {
+  background-color: #f0d9f8;
+  color: #2a2a2a;
+  border-color: #c49ac4;
+}
+
+.side-tab-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  gap: 0.5em;
+  pointer-events: none;
+}
+
+body.scrolled .side-tab-nav {
+  pointer-events: auto;
+  display:flex;
+}
+
+.side-tab-nav a {
+  font-family: 'Markazi Text', serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  background: #da9aef;
+  padding: 0.6em 0.8em;
+  border-radius: 0 12px 12px 0;
+  border: 1px solid #e5cef2;
+  box-shadow: 0 4px 12px rgba(194, 13, 225, 0.372);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  transform: translateX(-80%);
+  opacity: 0.3;
+  white-space: nowrap;
+  position: relative;
+}
+
+.side-tab-nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #c49ac4; /* "grab tab" pink strip */
+  border-radius: 0 3px 3px 0;
+}
+
+.side-tab-nav a:hover {
+  transform: translateX(0);
+  opacity: 1;
+  background-color: #fff;
+  z-index: 10000;
+}
+
+
+
+/* === MAIN SECTION === */
 main {
   padding: 2em;
+  position: relative;
+
 }
 
-/* Style the footer */
+/* === SECTION WRAPPER === */
+.section-wrapper {
+  padding: 60px 30px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.light-bg {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* === FOOTER === */
 footer {
   background-color: #eee;
   text-align: center;
   padding: 1em;
   font-size: 0.9em;
+  z-index: 1;
+  position: relative;
 }
+
+
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -116,44 +295,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* NAVIGATION */
-nav {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  z-index: 1000;
-  display: flex;
-  flex-direction: row;
-  gap: 0.75em;
-}
-
-nav a {
-  text-align: center;
-  width: max-content; /* Optional: keep the button size tidy */
-}
-
-
-/*nav a {
-  text-decoration: none;
-  color: #4a4a4a;
-  background-color: #f5f0e1;
-  padding: 0.5em 1em;
-  margin: 0 0.5em;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-nav a:hover {
-  background-color: #c49ac4;
-  color: white;
-}
-
-nav a.active {
-  background-color: #c49ac4;
-  color: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}/*
 
 /* IMAGE GRID */
 .image-grid {
@@ -312,6 +453,20 @@ nav a.active {
   }
 }
 
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  background-color: rgba(230, 220, 250, 0.3); /* soft lavender tint */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .side-tab-nav {
+    display: none;
+  }
+}
 
 
 

@@ -15,6 +15,9 @@
       document.head.appendChild(base);
     </script>
 
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -40,33 +43,78 @@
   </head>
 
   <body>
-    <header>
-      <h1 data-i18n="welcome">Porfolio of AvaMarie Mendoza</h1>
-      <p data-i18n="intro">Based in Michigan, primarily versed in remote work.</p>
-      <div class="language-toggle">
-        <button onclick="setLanguage('en')">🇺🇸 English</button>
-        <button onclick="setLanguage('es')">🇪🇸 Español</button>
-      </div>  
-      <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" rel="noopener noreferrer">
-        <button class="glass-button-luxury" data-i18n="linkedin">LinkedIn 💼</button>
-      </a>
 
-    </header>
-    <nav>
-      <a href="#about" class="glass-button-luxury">About</a>
-      <a href="#projects" class="glass-button-luxury">Projects</a>
-      <a href="#certifications" class="glass-button-luxury">Certifications</a>
-      <a href="#contact" class="glass-button-luxury">Contact</a>
-      <a href="#conferences" class="glass-button-luxury">Conferences</a>
-    </nav>
+   <header>
+
     
+  <!-- Moved language buttons up here -->
+  <div class="language-toggle">
+    <button onclick="setLanguage('en')">🇺🇸 English</button>
+    <button onclick="setLanguage('es')">🇪🇸 Español</button>
+  </div>
+
+ <!-- Name and intro -->
+  <h1 data-i18n="welcome">Portfolio of AvaMarie Mendoza</h1>
+  <p data-i18n="intro">
+  Based in Michigan 🌍
+</p>
+
+  <!-- Moved LinkedIn/Resume buttons below -->
+  <div class="linkedin-wrapper">
+    <a href="https://www.linkedin.com/in/avamarie-mendoza-347667163/" target="_blank" class="glass-button-luxury">
+      💼 LinkedIn
+    </a>
+    <a href="AvaMarie_Resume2025.pdf" download class="glass-button-luxury">
+      📄 Resume
+    </a>
+  </div>
+
+ 
+</header>
+  
+    <!-- NEW: Navigation bar under the language buttons -->
+  <!-- Top-center nav (visible at top of page only) -->
+<div class="top-nav-container">
+  <a href="#about" data-i18n="nav.about">About</a>
+  <a href="#projects" data-i18n="nav.projects">Projects</a>
+  <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
+  <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+  <a href="#conferences" data-i18n="nav.conferences">Conferences</a>
+  <a href="#contact" data-i18n="nav.contact">Contact</a>
+</div>
+
+<!-- Side-tab nav (only appears on scroll) -->
+<div class="side-tab-nav">
+  <a href="#about" data-i18n="nav.about">About</a>
+  <a href="#projects" data-i18n="nav.projects">Projects</a>
+  <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
+  <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+  <a href="#conferences" data-i18n="nav.conferences">Conferences</a>
+  <a href="#contact" data-i18n="nav.contact">Contact</a>
+</div>
+
+<!-- Old navigation
+    </header>
+    <div class="nav-container">
+      <nav>
+        <a href="#about" class="glass-button-luxury" data-i18n="nav.about">About</a>
+        <a href="#projects" class="glass-button-luxury" data-i18n="nav.projects">Projects</a>
+        <a href="#certifications" class="glass-button-luxury" data-i18n="nav.certifications">Certifications</a>
+        <a href="#gallery" class="glass-button-luxury" data-i18n="nav.gallery">Gallery</a>
+        <a href="#conferences" class="glass-button-luxury" data-i18n="nav.conferences">Conferences</a>
+        <a href="#contact" class="glass-button-luxury" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div> -->
+    
+
+
     <main>
       <section id="about">
         <div class ="section-wrapper light-bg"> 
-         <h2>About Me</h2>
+         <h2 data-i18n="about.title" > About Me </h2>
          <div class="about-wrapper">
           <!-- Profile image will appear on the right thanks to CSS "row-reverse" -->
-          <img src="images/DSC_0495.JPG" alt="" class="profile-photo" />
+          <img src="92539825.jpg" alt="" class="profile-photo" />
         
     
           <div class="about-text">
@@ -90,9 +138,9 @@
     
 
       <section id="certifications">
-        <h2 data-i18n="certification.title">My Certificates</h2>
+        <h2 data-i18n="certifications.title">My Certificates</h2>
         <div class="image-grid">
-          <img src="AmCert.png" alt="Description of photo 1">
+          <img src="AmCert.png" alt="GIS Certification from Michigan State University">
         
        
 
@@ -213,5 +261,13 @@
 
       document.addEventListener('DOMContentLoaded', updateTextContent);
     </script>
+
+ <script>
+  window.addEventListener('scroll', () => {
+    document.body.classList.toggle('scrolled', window.scrollY > 100);
+  });
+</script>
+
+
   </body>
 </html>
