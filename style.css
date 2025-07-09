@@ -26,7 +26,7 @@
 }
 
 .profile-photo {
-  width: 670px; /* Larger  */
+  width: 480px; /* Larger  */
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -53,6 +53,14 @@
 .about-text {
   max-width: 600px;
   flex: 1;
+}
+.about-text-box {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #fff8f8; /* Optional: gives a subtle soft tone */
+  font-size: 1.1rem;         /* Slightly larger font */
+  line-height: 1.6;
 }
 
 /* Content container */
@@ -111,17 +119,6 @@ header p {
   margin-top: 1em; /* Add this if it's not already styled */
 }
 
-<<<<<<< HEAD
-.inline-icon {
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: text-bottom;
-  margin-left: 0.3em;
-  border: 1px solid red; /*temporary*/
-}
-=======
-
->>>>>>> 008156c4669ab00ae856f669a41d8f818224bc98
 
 /* === LINKEDIN + RESUME === */
 .linkedin-wrapper {
@@ -465,15 +462,6 @@ h2 {
   border-radius: 5px;
   margin-bottom: 1rem;
 }
-<<<<<<< HEAD
-
-@media (max-width: 768px) {
-  .side-tab-nav {
-    display: none;
-  }
-}
-=======
->>>>>>> 008156c4669ab00ae856f669a41d8f818224bc98
 
 @media (max-width: 768px) {
   .side-tab-nav {
