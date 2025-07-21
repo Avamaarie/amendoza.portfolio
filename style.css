@@ -58,7 +58,7 @@
   border: 2px solid #ccc;
   border-radius: 12px;
   padding: 1.5rem;
-  background-color: #fff8f8; /* Optional: gives a subtle soft tone */
+  background-color: none; /* Optional: gives a subtle soft tone */
   font-size: 1.1rem;         /* Slightly larger font */
   line-height: 1.6;
 }
@@ -518,4 +518,33 @@ h2 {
     max-width: 300px;
     margin-top: 1rem;
   }
+}
+
+/* This is for my visibility jpg sizing */
+.project-image-wrapper {
+  display: flex;
+  justify-content: center; /* center the image */
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.project-photo {
+  width: 50%;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.subsection-header {
+  background-color: #f3e5f5; /* light lilac */
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-family: 'Markazi Text', serif;
+  font-weight: 700;
+  font-size: 1.8rem;         /* Slightly smaller than your h2s */
+  color: #2d2d2d;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
